@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shadymagorat-tech.github.io/shady-magora-365/sitemap.xml

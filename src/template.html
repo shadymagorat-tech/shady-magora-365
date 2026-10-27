@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="{{ t.lang }}" dir="{{ t.dir }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ t.meta.title }}</title>
+<meta name="description" content="{{ t.meta.description }}">
+<link rel="canonical" href="{{ urls[t.lang] }}">
+{% for code in langs %}<link rel="alternate" hreflang="{{ code }}" href="{{ urls[code] }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ urls['en'] }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shady Magora 365">
+<meta property="og:title" content="{{ t.meta.og_title }}">
+<meta property="og:description" content="{{ t.meta.og_description }}">
+<meta property="og:url" content="{{ urls[t.lang] }}">
+<meta property="og:image" content="{{ base }}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ og_locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t.meta.og_title }}">
+<meta name="twitter:description" content="{{ t.meta.og_description }}">
+<meta name="twitter:image" content="{{ base }}/assets/og.png">
+<meta name="theme-color" content="#0D3436">
+<link rel="icon" href="{{ root }}assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="{{ fonts_url }}">
+<link rel="stylesheet" href="{{ fonts_url }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ fonts_url }}"></noscript>
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+{% if t.lang == 'en' %}<script>try{var l=localStorage.getItem('sm365-lang');if(l==='fr'||l==='ar'){location.replace(l+'/'+location.hash)}}catch(e){}</script>{% endif %}
+<script type="application/ld+json">{{ jsonld }}</script>
+</head>
+<body>
+<a class="skip" href="#main">{{ t.ui.skip }}</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="mark" href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}"><span class="mark__name">Shady Magora</span> <span class="mark__num">365</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#owners">{{ t.ui.nav_owners }}</a>
+      <a href="#stays">{{ t.ui.nav_stays }}</a>
+      <a href="#guests">{{ t.ui.nav_guests }}</a>
+      <a href="#faq">{{ t.ui.nav_faq }}</a>
+      <a href="#contact">{{ t.ui.nav_contact }}</a>
+    </nav>
+    <div class="langs" role="group" aria-label="{{ t.ui.lang_label }}">
+      <a href="{{ root }}" data-lang="en" lang="en" {% if t.lang == 'en' %}aria-current="page"{% endif %}>EN</a>
+      <a href="{{ root }}fr/" data-lang="fr" lang="fr" {% if t.lang == 'fr' %}aria-current="page"{% endif %}>FR</a>
+      <a href="{{ root }}ar/" data-lang="ar" lang="ar" {% if t.lang == 'ar' %}aria-current="page"{% endif %}>عربي</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <h1 class="hero__title">{{ t.hero.title }}</h1>
+    <p class="hero__sub">{{ t.hero.sub }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--brass" href="#owners">{{ t.hero.owner_btn }}</a>
+      <a class="btn btn--ghost" href="#guests">{{ t.hero.guest_btn }}</a>
+      <span class="badge"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.4L8 11.2 4.1 13.4l.9-4.4-3.3-3 4.4-.5z" fill="currentColor"/></svg>{{ t.hero.badge }}</span>
+    </div>
+  </div>
+  <figure class="ribbon wrap">
+    {{ ribbon }}
+    <figcaption>{{ t.hero.ribbon_caption }}</figcaption>
+  </figure>
+</section>
+
+<section id="owners" class="sec owners">
+  <div class="wrap">
+    <h2 class="h2">{{ t.owners.title }}</h2>
+    <p class="lead">{{ t.owners.lead }}</p>
+    <div class="owners__grid">
+      <ul class="dolist">
+        {% for it in t.owners['items'] %}<li><h3>{{ it.t }}</h3><p>{{ it.d }}</p></li>
+        {% endfor %}
+      </ul>
+      <aside class="yours">
+        <h3>{{ t.owners.you_title }}</h3>
+        <p>{{ t.owners.you_lead }}</p>
+        <ul>{% for it in t.owners.you_items %}<li>{{ it }}</li>{% endfor %}</ul>
+      </aside>
+    </div>
+    <a class="btn btn--teal" href="{{ wa.owner }}" target="_blank" rel="noopener">{{ t.owners.cta }}</a>
+  </div>
+</section>
+
+<section class="sec why">
+  <div class="wrap">
+    <h2 class="h2">{{ t.why.title }}</h2>
+    <ol class="timeline">
+      {% for s in t.why.steps %}<li><span class="timeline__when">{{ s.when }}</span><h3>{{ s.t }}</h3><p>{{ s.d }}</p></li>
+      {% endfor %}
+    </ol>
+    <p class="why__langs">{{ t.why.langs }}</p>
+  </div>
+</section>
+
+<section class="areas" aria-labelledby="areas-title">
+  <h2 id="areas-title" class="visually-hidden">{{ t.areas.title }}</h2>
+  <div class="area area--cairo"><div class="area__in"><p class="area__name">{{ t.areas.cairo_t }}</p><p>{{ t.areas.cairo_d }}</p></div></div>
+  <div class="area area--sokhna"><div class="area__in"><p class="area__name">{{ t.areas.sokhna_t }}</p><p>{{ t.areas.sokhna_d }}</p></div></div>
+</section>
+
+<section id="stays" class="sec stays">
+  <div class="wrap">
+    <h2 class="h2">{{ t.stays.title }}</h2>
+    <p class="lead">{{ t.stays.lead }}</p>
+    <ul class="stays__list">
+      {% for s in stays %}<li class="stay stay--{{ s.region }}">
+        <a href="https://www.airbnb.com/rooms/{{ s.airbnb_id }}" target="_blank" rel="noopener">
+          {% if s.photo %}<img src="{{ root }}assets/stays/{{ s.photo }}" alt="{{ s.name }}" width="800" height="600" loading="lazy" decoding="async">
+          {% else %}<span class="stay__ph" aria-hidden="true"><span>{{ s.area[t.lang] }}</span></span>{% endif %}
+          <span class="stay__body">
+            {% if s.photo %}<span class="stay__area">{{ s.area[t.lang] }}</span>{% endif %}
+            <span class="stay__name" lang="en">{{ s.name }}</span>
+            <span class="stay__meta">{{ t.stays.bedroom if s.bedrooms == 1 else t.stays.bedrooms.replace('{n}', s.bedrooms|string) }}, {{ t.stays.sleeps.replace('{n}', s.sleeps|string) }}</span>
+            <span class="stay__link">{{ t.stays.view }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="guests" class="sec guests">
+  <div class="wrap">
+    <h2 class="h2">{{ t.guests.title }}</h2>
+    <p class="lead">{{ t.guests.lead }}</p>
+    <div class="offers">
+      <article class="offer">
+        <h3>{{ t.guests.tour_t }}</h3>
+        <p>{{ t.guests.tour_d }}</p>
+        <a class="btn btn--teal" href="{{ wa.tour }}" target="_blank" rel="noopener">{{ t.guests.tour_btn }}</a>
+      </article>
+      <article class="offer">
+        <h3>{{ t.guests.pickup_t }}</h3>
+        <p>{{ t.guests.pickup_d }}</p>
+        <a class="btn btn--teal" href="{{ wa.pickup }}" target="_blank" rel="noopener">{{ t.guests.pickup_btn }}</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="sec reviews" hidden>
+  <div class="wrap">
+    <h2 class="h2">{{ t.reviews.title }}</h2>
+    <ul class="reviews__list" data-src="{{ root }}data/reviews.json" data-source-label="{{ t.reviews.source }}"></ul>
+  </div>
+</section>
+
+<section id="faq" class="sec faq">
+  <div class="wrap faq__wrap">
+    <h2 class="h2">{{ t.faq.title }}</h2>
+    <div class="faq__list">
+      {% for f in t.faq['items'] %}<details{% if loop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 class="contact__title">{{ t.contact.title }}</h2>
+    <p class="contact__lead">{{ t.contact.lead }}</p>
+    <div class="contact__actions">
+      <a class="btn btn--brass" href="{{ wa.general }}" target="_blank" rel="noopener">{{ t.contact.wa_btn }}</a>
+      <p class="contact__alt">{{ t.contact.email_label }}: <a href="mailto:shadymagorat@gmail.com">shadymagorat@gmail.com</a></p>
+      <p class="contact__alt"><a href="tel:+201026315970" dir="ltr">+20 102 631 5970</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap"><p>{{ t.footer.line }}</p></div>
+</footer>
+
+<a class="float-wa" href="{{ wa.general }}" target="_blank" rel="noopener">
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="currentColor"/></svg>
+  <span>{{ t.ui.chat }}</span>
+</a>
+
+<script src="{{ root }}assets/site.js" defer></script>
+</body>
+</html>

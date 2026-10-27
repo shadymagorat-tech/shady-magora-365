@@ -1,0 +1,107 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "meta": {
+    "title": "Shady Magora 365 | Airbnb management in Cairo and Ain Sokhna",
+    "description": "I take over your Airbnb listing in Cairo or Ain Sokhna: listing, pricing, guests, reviews and payouts. Former Airbnb specialist, now a Superhost.",
+    "og_title": "Shady Magora 365",
+    "og_description": "Your apartment, booked. Your phone, quiet. Airbnb management in Cairo and Ain Sokhna."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "nav_owners": "For owners",
+    "nav_stays": "Stays",
+    "nav_guests": "For guests",
+    "nav_faq": "FAQ",
+    "nav_contact": "Contact",
+    "lang_label": "Language",
+    "chat": "Chat on WhatsApp"
+  },
+  "hero": {
+    "badge": "Airbnb Superhost",
+    "title": "Your apartment, booked. Your phone, quiet.",
+    "sub": "I take over your Airbnb listing in Cairo or Ain Sokhna and run it: the listing, the prices, the guests, the reviews and the payouts. I spent four years inside Airbnb, so I know how the platform actually works.",
+    "owner_btn": "I'm an owner",
+    "guest_btn": "I'm a guest",
+    "ribbon_caption": "365 nights a year. I watch every one of them."
+  },
+  "owners": {
+    "title": "What I do for owners",
+    "lead": "You hand me the listing. I handle everything that happens on Airbnb.",
+    "items": [
+      {"t": "A listing that gets clicked", "d": "Title, description, photo order and amenities, written in English, French and Arabic so travellers from everywhere understand it."},
+      {"t": "Prices and calendar", "d": "Nightly prices that move with weekends, Eid, Christmas and the beach season, inside the minimum you set."},
+      {"t": "Guests, day and night", "d": "Fast replies before, during and after every stay. House rules explained before arrival, not after a problem."},
+      {"t": "Reviews, disputes and claims", "d": "When something goes wrong, I know the Airbnb process from the inside: reviews, disputes and AirCover claims."},
+      {"t": "Clear payouts", "d": "A plain statement of every booking and your share, settled on a fixed schedule."}
+    ],
+    "you_title": "What stays with your team",
+    "you_lead": "I manage the listing, not the building. Clear lines mean no surprises for anyone.",
+    "you_items": ["Cleaning and laundry", "Key handover and check-in", "Repairs and maintenance"],
+    "cta": "Tell me about your place"
+  },
+  "why": {
+    "title": "Why me",
+    "steps": [
+      {"when": "Before Airbnb", "t": "Hotels and airlines", "d": "Hotel operations, airline reservation systems, Lufthansa Cargo and Trip.com."},
+      {"when": "2019 to 2023", "t": "Inside Airbnb", "d": "France Specialist and Trainer, Ambassador and AirCover Specialist."},
+      {"when": "Since 2023", "t": "Hosting", "d": "Independent co-host across Cairo, Ain Sokhna and Siwa. Superhost on my own account."}
+    ],
+    "langs": "I answer guests in Arabic, English and French."
+  },
+  "areas": {
+    "title": "Where I work",
+    "cairo_t": "Cairo",
+    "cairo_d": "Zamalek, Sheikh Zayed and more. City flats for travellers, families and long stays.",
+    "sokhna_t": "Ain Sokhna",
+    "sokhna_d": "Palm Beach villas with pools, an hour and a half from Cairo. Busy every weekend and every Eid."
+  },
+  "stays": {
+    "title": "Stays I run right now",
+    "lead": "Book them straight on Airbnb.",
+    "view": "See it on Airbnb",
+    "sleeps": "Sleeps {n}",
+    "bedrooms": "{n} bedrooms",
+    "bedroom": "1 bedroom",
+    "photo_soon": "Photos on Airbnb"
+  },
+  "guests": {
+    "title": "For guests",
+    "lead": "Staying in one of my places, or anywhere in Cairo? Two things I can sort for you.",
+    "tour_t": "Day tours with me",
+    "tour_d": "The Pyramids, Old Cairo, Khan el Khalili, or a day you design. I lead the day: the plan, the timing and the transport.",
+    "tour_btn": "Plan a day tour",
+    "pickup_t": "Airport pickup in a Tesla",
+    "pickup_d": "A private pickup from Cairo airport in an electric car. Quiet, cool, and already waiting when you land.",
+    "pickup_btn": "Book a pickup"
+  },
+  "reviews": {
+    "title": "What guests wrote",
+    "source": "Read on Airbnb"
+  },
+  "faq": {
+    "title": "Questions owners ask",
+    "items": [
+      {"q": "Who handles cleaning and check-in?", "a": "Your own team. I handle the listing, prices, guests, reviews and payouts. We agree the handover details before the first booking."},
+      {"q": "Do I lose control of my place?", "a": "No. You set the lowest price you accept, and you can block any dates you want for yourself."},
+      {"q": "Which areas do you cover?", "a": "Cairo (Zamalek, Sheikh Zayed and more) and Ain Sokhna. Somewhere else? Ask anyway."},
+      {"q": "How do you charge?", "a": "A percentage of each booking. The rate depends on the property, so let's talk about yours on WhatsApp."},
+      {"q": "Is there a written agreement?", "a": "Yes. A signed agreement in Arabic and English before anything goes live."}
+    ]
+  },
+  "contact": {
+    "title": "Let's talk about your place",
+    "lead": "WhatsApp is the fastest way to reach me. Send a few photos and the area, and I'll tell you honestly what it can do on Airbnb.",
+    "wa_btn": "Message me on WhatsApp",
+    "email_label": "Or email"
+  },
+  "footer": {
+    "line": "Shady Magora 365. Airbnb management in Cairo and Ain Sokhna."
+  },
+  "wa": {
+    "owner": "Hi Shady, I have a property I'd like you to manage on Airbnb.",
+    "tour": "Hi Shady, I'd like to plan a day tour.",
+    "pickup": "Hi Shady, I need an airport pickup.",
+    "general": "Hi Shady!"
+  }
+}

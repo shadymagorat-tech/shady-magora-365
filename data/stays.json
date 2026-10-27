@@ -1,0 +1,52 @@
+[
+  {
+    "id": "zamalek-gallery",
+    "name": "Antique Gallery Flat with Nile View",
+    "region": "cairo",
+    "area": {"en": "Zamalek, Cairo", "fr": "Zamalek, Le Caire", "ar": "الزمالك، القاهرة"},
+    "bedrooms": 1,
+    "sleeps": 3,
+    "airbnb_id": "1747283504789570481",
+    "photo": null
+  },
+  {
+    "id": "zamalek-1br",
+    "name": "Classic Zamalek 1BR, Garden Views",
+    "region": "cairo",
+    "area": {"en": "Zamalek, Cairo", "fr": "Zamalek, Le Caire", "ar": "الزمالك، القاهرة"},
+    "bedrooms": 1,
+    "sleeps": 4,
+    "airbnb_id": "1773917349237692831",
+    "photo": null
+  },
+  {
+    "id": "ganet-zayed-2br",
+    "name": "Ganet Zayed 2BR",
+    "region": "cairo",
+    "area": {"en": "Sheikh Zayed", "fr": "Cheikh Zayed", "ar": "الشيخ زايد"},
+    "bedrooms": 2,
+    "sleeps": 6,
+    "airbnb_id": "1789826555417858049",
+    "photo": null
+  },
+  {
+    "id": "palm-beach-4br",
+    "name": "4BR Family Villa by the Pool",
+    "region": "sokhna",
+    "area": {"en": "Palm Beach, Ain Sokhna", "fr": "Palm Beach, Aïn Sokhna", "ar": "بالم بيتش، العين السخنة"},
+    "bedrooms": 4,
+    "sleeps": 8,
+    "airbnb_id": "1773275330884641794",
+    "photo": null
+  },
+  {
+    "id": "khorshid-villa",
+    "name": "3BR Oasis Villa with Lagoon Pool Access",
+    "region": "sokhna",
+    "area": {"en": "Palm Beach, Ain Sokhna", "fr": "Palm Beach, Aïn Sokhna", "ar": "بالم بيتش، العين السخنة"},
+    "bedrooms": 3,
+    "sleeps": 6,
+    "airbnb_id": "1791418875302515737",
+    "photo": null
+  }
+]
