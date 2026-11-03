@@ -2,10 +2,10 @@
   "lang": "fr",
   "dir": "ltr",
   "meta": {
-    "title": "Shady Magora 365 | Gestion Airbnb au Caire et à Aïn Sokhna",
-    "description": "Je prends en main votre annonce Airbnb au Caire ou à Aïn Sokhna : annonce, prix, voyageurs, avis et versements. Ancien spécialiste Airbnb, aujourd'hui Superhôte.",
-    "og_title": "Shady Magora 365",
-    "og_description": "Votre appartement réservé, votre téléphone tranquille. Gestion Airbnb au Caire et à Aïn Sokhna."
+    "title": "Gestion Airbnb pour propriétaires au Caire et à Aïn Sokhna | Shady Magora 365",
+    "description": "Propriétaire d'un appartement ou d'une villa au Caire ou à Aïn Sokhna ? Shady Magora gère votre annonce Airbnb : création, prix, voyageurs, avis et versements. Ancien d'Airbnb, Superhôte.",
+    "og_title": "Shady Magora 365 | Gestion Airbnb au Caire et à Aïn Sokhna",
+    "og_description": "Votre appartement réservé, votre téléphone tranquille. Gestion d'annonces Airbnb pour propriétaires au Caire et à Aïn Sokhna."
   },
   "ui": {
     "skip": "Aller au contenu",
@@ -15,7 +15,12 @@
     "nav_faq": "Questions",
     "nav_contact": "Contact",
     "lang_label": "Langue",
-    "chat": "Écrire sur WhatsApp"
+    "chat": "Écrire sur WhatsApp",
+    "menu": "Menu",
+    "nav_label": "Navigation principale",
+    "nav_how": "Comment ça marche",
+    "og_alt": "Shady Magora 365 : gestion Airbnb au Caire et à Aïn Sokhna",
+    "float_label": "Propriétaires : écrire à Shady sur WhatsApp (ouvre WhatsApp)"
   },
   "hero": {
     "badge": "Superhôte Airbnb",
@@ -29,23 +34,55 @@
     "title": "Ce que je fais pour les propriétaires",
     "lead": "Vous me confiez l'annonce. Je m'occupe de tout ce qui se passe sur Airbnb.",
     "items": [
-      {"t": "Une annonce qui donne envie", "d": "Titre, description, ordre des photos et équipements, rédigés en français, en anglais et en arabe pour être compris par tous les voyageurs."},
-      {"t": "Prix et calendrier", "d": "Des prix qui suivent les week-ends, l'Aïd, Noël et la saison balnéaire, sans jamais descendre sous le minimum que vous fixez."},
-      {"t": "Les voyageurs, jour et nuit", "d": "Des réponses rapides avant, pendant et après chaque séjour. Le règlement expliqué avant l'arrivée, pas après un problème."},
-      {"t": "Avis, litiges et réclamations", "d": "Quand quelque chose tourne mal, je connais les procédures Airbnb de l'intérieur : avis, litiges et réclamations AirCover."},
-      {"t": "Des versements clairs", "d": "Un relevé simple de chaque réservation et de votre part, réglé à date fixe."}
+      {
+        "t": "Une annonce qui donne envie",
+        "d": "Titre, description, ordre des photos et équipements, rédigés en français, en anglais et en arabe pour être compris par tous les voyageurs."
+      },
+      {
+        "t": "Prix et calendrier",
+        "d": "Des prix qui suivent les week-ends, l'Aïd, Noël et la saison balnéaire, sans jamais descendre sous le minimum que vous fixez."
+      },
+      {
+        "t": "Les voyageurs, jour et nuit",
+        "d": "Des réponses rapides avant, pendant et après chaque séjour. Le règlement expliqué avant l'arrivée, pas après un problème."
+      },
+      {
+        "t": "Avis, litiges et réclamations",
+        "d": "Quand quelque chose tourne mal, je connais les procédures Airbnb de l'intérieur : avis, litiges et réclamations AirCover."
+      },
+      {
+        "t": "Des versements clairs",
+        "d": "Un relevé simple de chaque réservation et de votre part, réglé chaque mois."
+      }
     ],
     "you_title": "Ce qui reste à votre équipe",
     "you_lead": "Je gère l'annonce, pas l'immeuble. Des rôles clairs, aucune mauvaise surprise.",
-    "you_items": ["Ménage et linge", "Remise des clés et accueil", "Réparations et entretien"],
-    "cta": "Parlez-moi de votre bien"
+    "you_items": [
+      "Ménage et linge",
+      "Remise des clés, arrivées et départs",
+      "Réparations et entretien"
+    ],
+    "cta": "Parlez-moi de votre bien",
+    "more": "Ce que je fais, ce que je ne fais pas, et comment commencer"
   },
   "why": {
     "title": "Pourquoi moi",
     "steps": [
-      {"when": "Avant Airbnb", "t": "Hôtellerie et aérien", "d": "Exploitation hôtelière, systèmes de réservation aérienne, Lufthansa Cargo et Trip.com."},
-      {"when": "2019 à 2023", "t": "Chez Airbnb", "d": "Spécialiste et formateur pour le marché français, Ambassadeur et spécialiste AirCover."},
-      {"when": "Depuis 2023", "t": "Hôte", "d": "Co-hôte indépendant au Caire, à Aïn Sokhna et à Siwa. Superhôte sur mon propre compte."}
+      {
+        "when": "Avant Airbnb",
+        "t": "Hôtellerie et aérien",
+        "d": "Exploitation hôtelière, systèmes de réservation aérienne, Lufthansa Cargo et Trip.com."
+      },
+      {
+        "when": "2019 à 2023",
+        "t": "Chez Airbnb",
+        "d": "Spécialiste et formateur pour le marché français, Ambassadeur et spécialiste AirCover."
+      },
+      {
+        "when": "Depuis 2023",
+        "t": "Hôte",
+        "d": "Co-hôte indépendant au Caire, à Aïn Sokhna et à Siwa. Superhôte sur mon propre compte."
+      }
     ],
     "langs": "Je réponds aux voyageurs en arabe, en anglais et en français."
   },
@@ -54,7 +91,7 @@
     "cairo_t": "Le Caire",
     "cairo_d": "Zamalek, Cheikh Zayed et d'autres quartiers. Des appartements pour voyageurs, familles et longs séjours.",
     "sokhna_t": "Aïn Sokhna",
-    "sokhna_d": "Des villas avec piscine à Palm Beach, à une heure et demie du Caire. Pleines chaque week-end et à chaque Aïd."
+    "sokhna_d": "Des villas avec piscine à Palm Beach, à une heure et demie du Caire. [TO CONFIRM: busy every weekend and every Eid?]"
   },
   "stays": {
     "title": "Les logements que je gère",
@@ -62,17 +99,16 @@
     "view": "Voir sur Airbnb",
     "sleeps": "{n} voyageurs",
     "bedrooms": "{n} chambres",
-    "bedroom": "1 chambre",
-    "photo_soon": "Photos sur Airbnb"
+    "bedroom": "1 chambre"
   },
   "guests": {
     "title": "Pour les voyageurs",
     "lead": "Vous séjournez chez moi, ou ailleurs au Caire ? Deux choses que je peux organiser pour vous.",
     "tour_t": "Une journée d'excursion avec moi",
-    "tour_d": "Les Pyramides, le Vieux Caire, Khan el-Khalili, ou une journée à votre idée. J'accompagne la journée : le programme, les horaires et le transport.",
+    "tour_d": "Les Pyramides, le Vieux Caire, Khan el-Khalili, ou une journée à votre idée. Je suis votre accompagnateur pour la journée et j'organise le programme, les horaires et le transport.",
     "tour_btn": "Organiser une excursion",
     "pickup_t": "Transfert aéroport en Tesla",
-    "pickup_d": "Un transfert privé depuis l'aéroport du Caire en voiture électrique. Silencieux, climatisé, et déjà là quand vous atterrissez.",
+    "pickup_d": "J'organise un transfert privé depuis l'aéroport du Caire en voiture électrique. Silencieux, climatisé, et déjà là quand vous atterrissez.",
     "pickup_btn": "Réserver un transfert"
   },
   "reviews": {
@@ -82,26 +118,88 @@
   "faq": {
     "title": "Les questions des propriétaires",
     "items": [
-      {"q": "Qui s'occupe du ménage et de l'accueil ?", "a": "Votre propre équipe. Je m'occupe de l'annonce, des prix, des voyageurs, des avis et des versements. Nous fixons ensemble l'organisation de l'accueil avant la première réservation."},
-      {"q": "Est-ce que je perds le contrôle de mon bien ?", "a": "Non. Vous fixez le prix minimum que vous acceptez, et vous bloquez les dates que vous voulez garder pour vous."},
-      {"q": "Quels quartiers couvrez-vous ?", "a": "Le Caire (Zamalek, Cheikh Zayed et d'autres) et Aïn Sokhna. Ailleurs ? Demandez quand même."},
-      {"q": "Comment êtes-vous rémunéré ?", "a": "Un pourcentage de chaque réservation. Le taux dépend du bien, parlons du vôtre sur WhatsApp."},
-      {"q": "Y a-t-il un contrat écrit ?", "a": "Oui. Un contrat signé en arabe et en anglais avant toute mise en ligne."}
+      {
+        "q": "Qui s'occupe du ménage et de l'accueil ?",
+        "a": "Votre propre équipe. Le ménage, les arrivées, les départs, les clés et l'entretien restent de votre côté. Je m'occupe de l'annonce, des prix, des voyageurs, des avis et des versements."
+      },
+      {
+        "q": "Est-ce que je perds le contrôle de mon bien ?",
+        "a": "Non. Vous fixez le prix minimum que vous acceptez, et vous bloquez les dates que vous voulez garder pour vous."
+      },
+      {
+        "q": "Quels quartiers couvrez-vous ?",
+        "a": "Le Caire (Zamalek, Cheikh Zayed et d'autres) et Aïn Sokhna. Ailleurs ? Demandez quand même."
+      },
+      {
+        "q": "Comment êtes-vous rémunéré ?",
+        "a": "Un pourcentage de chaque réservation. Le taux dépend du bien, parlons du vôtre sur WhatsApp."
+      },
+      {
+        "q": "Y a-t-il un contrat écrit ?",
+        "a": "Oui. Un contrat signé en arabe et en anglais avant toute mise en ligne."
+      }
     ]
   },
   "contact": {
     "title": "Parlons de votre bien",
     "lead": "WhatsApp est le moyen le plus rapide de me joindre. Envoyez quelques photos et le quartier, et je vous dirai franchement ce qu'il peut donner sur Airbnb.",
     "wa_btn": "M'écrire sur WhatsApp",
-    "email_label": "Ou par e-mail"
+    "email_label": "Ou par e-mail",
+    "phone_label": "Téléphone",
+    "wa_label": "Propriétaires : écrire à Shady sur WhatsApp (ouvre WhatsApp)"
   },
   "footer": {
     "line": "Shady Magora 365. Gestion Airbnb au Caire et à Aïn Sokhna."
   },
+  "owner_page": {
+    "meta": {
+      "title": "Gestion Airbnb : comment ça marche pour les propriétaires au Caire et à Aïn Sokhna | Shady Magora 365",
+      "description": "Ce que Shady Magora fait pour votre annonce Airbnb au Caire ou à Aïn Sokhna, ce qui reste à votre équipe (ménage, arrivées, clés, entretien) et comment commencer sur WhatsApp.",
+      "og_title": "Comment ça marche pour les propriétaires | Shady Magora 365",
+      "og_description": "Je gère votre annonce sur Airbnb. Votre équipe gère le logement. Voici le partage des rôles, et comment commencer."
+    },
+    "eyebrow": "Propriétaires",
+    "title": "Comment ça marche, simplement.",
+    "intro": "En bref : je gère votre annonce sur Airbnb. Votre équipe s'occupe du logement lui-même. Voici le partage des rôles, et comment on commence.",
+    "cta": "M'écrire sur WhatsApp",
+    "do_title": "Ce que je fais",
+    "do_lead": "Tout ce qui se passe sur Airbnb.",
+    "dont_title": "Ce que je ne fais pas",
+    "dont_lead": "Je gère l'annonce, pas l'immeuble. Rien sur place n'est inclus : vous et votre équipe organisez ces points avant la première réservation.",
+    "dont_items": [
+      "Ménage et linge",
+      "Remise des clés",
+      "Arrivées et départs des voyageurs",
+      "Réparations et entretien",
+      "Tout ce qui demande une présence sur place"
+    ],
+    "start_title": "Comment commencer",
+    "steps": [
+      {
+        "t": "Écrivez-moi sur WhatsApp",
+        "d": "Indiquez le quartier et envoyez quelques photos. Le bouton ci-dessous ouvre un message déjà prêt."
+      },
+      {
+        "t": "Un premier échange",
+        "d": "On parle de votre bien, du prix minimum par nuit que vous acceptez et des dates que vous gardez pour vous. [TO CONFIRM: on WhatsApp, a call or a meeting?]"
+      },
+      {
+        "t": "Un contrat écrit",
+        "d": "Un contrat signé en arabe et en anglais avant toute mise en ligne. [TO CONFIRM]"
+      },
+      {
+        "t": "Votre annonce est en ligne",
+        "d": "Je rédige ou retravaille l'annonce en français, en anglais et en arabe, je règle les prix et le calendrier, et je réponds aux voyageurs. [TO CONFIRM: you add me as co-host on your own Airbnb listing, or another setup?]"
+      },
+      {
+        "t": "Versements mensuels",
+        "d": "Un relevé simple de chaque réservation et de votre part, réglé chaque mois."
+      }
+    ]
+  },
   "wa": {
-    "owner": "Bonjour Shady, j'ai un bien que j'aimerais vous confier sur Airbnb.",
+    "owner": "Bonjour Shady, j'ai un bien au Caire ou à Aïn Sokhna et j'aimerais en savoir plus sur votre service de gestion Airbnb.",
     "tour": "Bonjour Shady, je voudrais organiser une journée d'excursion.",
-    "pickup": "Bonjour Shady, j'ai besoin d'un transfert depuis l'aéroport.",
-    "general": "Bonjour Shady !"
+    "pickup": "Bonjour Shady, j'ai besoin d'un transfert depuis l'aéroport."
   }
 }

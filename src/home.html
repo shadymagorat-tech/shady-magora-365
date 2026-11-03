@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero">
+  <div class="wrap hero__in">
+    <h1 class="hero__title">{{ t.hero.title }}</h1>
+    <p class="hero__sub">{{ t.hero.sub }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--brass" href="#owners">{{ t.hero.owner_btn }}</a>
+      <a class="btn btn--ghost" href="#guests">{{ t.hero.guest_btn }}</a>
+      <span class="badge"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.4L8 11.2 4.1 13.4l.9-4.4-3.3-3 4.4-.5z" fill="currentColor"/></svg>{{ t.hero.badge }}</span>
+    </div>
+  </div>
+  <figure class="ribbon wrap">
+    {{ ribbon }}
+    <figcaption>{{ t.hero.ribbon_caption }}</figcaption>
+  </figure>
+</section>
+
+<section id="owners" class="sec owners">
+  <div class="wrap">
+    <h2 class="h2">{{ t.owners.title }}</h2>
+    <p class="lead">{{ t.owners.lead }}</p>
+    <div class="owners__grid">
+      <ul class="dolist">
+        {% for it in t.owners['items'] %}<li><h3>{{ it.t }}</h3><p>{{ it.d }}</p></li>
+        {% endfor %}
+      </ul>
+      <aside class="yours">
+        <h3>{{ t.owners.you_title }}</h3>
+        <p>{{ t.owners.you_lead }}</p>
+        <ul>{% for it in t.owners.you_items %}<li>{{ it }}</li>{% endfor %}</ul>
+      </aside>
+    </div>
+    <div class="owners__actions">
+      <a class="btn btn--teal" href="{{ wa.owner }}" target="_blank" rel="noopener">{{ t.owners.cta }}</a>
+      <a class="textlink" href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}owners/">{{ t.owners.more }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec why">
+  <div class="wrap">
+    <h2 class="h2">{{ t.why.title }}</h2>
+    <ol class="timeline">
+      {% for s in t.why.steps %}<li><span class="timeline__when">{{ s.when }}</span><h3>{{ s.t }}</h3><p>{{ s.d }}</p></li>
+      {% endfor %}
+    </ol>
+    <p class="why__langs">{{ t.why.langs }}</p>
+  </div>
+</section>
+
+<section class="areas" aria-labelledby="areas-title">
+  <h2 id="areas-title" class="visually-hidden">{{ t.areas.title }}</h2>
+  <div class="area area--cairo"><div class="area__in"><p class="area__name">{{ t.areas.cairo_t }}</p><p>{{ t.areas.cairo_d|tbc }}</p></div></div>
+  <div class="area area--sokhna"><div class="area__in"><p class="area__name">{{ t.areas.sokhna_t }}</p><p>{{ t.areas.sokhna_d|tbc }}</p></div></div>
+</section>
+
+<section id="stays" class="sec stays">
+  <div class="wrap">
+    <h2 class="h2">{{ t.stays.title }}</h2>
+    <p class="lead">{{ t.stays.lead }}</p>
+    <ul class="stays__list">
+      {% for s in stays %}<li class="stay stay--{{ s.region }}">
+        <a href="https://www.airbnb.com/rooms/{{ s.airbnb_id }}" target="_blank" rel="noopener">
+          {% if s.photo %}<picture>{% if s.photo_avif %}<source type="image/avif" srcset="{{ root }}assets/stays/{{ s.photo_avif }}">{% endif %}<img src="{{ root }}assets/stays/{{ s.photo }}" alt="{{ s.name }}, {{ s.area[t.lang] }}" width="800" height="600" loading="lazy" decoding="async"></picture>
+          {% else %}<span class="stay__ph"><span>{{ s.area[t.lang] }}</span></span>{% endif %}
+          <span class="stay__body">
+            {% if s.photo %}<span class="stay__area">{{ s.area[t.lang] }}</span>{% endif %}
+            <span class="stay__name" lang="en" dir="ltr">{{ s.name }}</span>
+            <span class="stay__meta">{{ t.stays.bedroom if s.bedrooms == 1 else t.stays.bedrooms.replace('{n}', s.bedrooms|string) }}, {{ t.stays.sleeps.replace('{n}', s.sleeps|string) }}</span>
+            <span class="stay__link">{{ t.stays.view }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="guests" class="sec guests">
+  <div class="wrap">
+    <h2 class="h2">{{ t.guests.title }}</h2>
+    <p class="lead">{{ t.guests.lead }}</p>
+    <div class="offers">
+      <article class="offer">
+        <h3>{{ t.guests.tour_t }}</h3>
+        <p>{{ t.guests.tour_d }}</p>
+        <a class="btn btn--teal" href="{{ wa.tour }}" target="_blank" rel="noopener">{{ t.guests.tour_btn }}</a>
+      </article>
+      <article class="offer">
+        <h3>{{ t.guests.pickup_t }}</h3>
+        <p>{{ t.guests.pickup_d }}</p>
+        <a class="btn btn--teal" href="{{ wa.pickup }}" target="_blank" rel="noopener">{{ t.guests.pickup_btn }}</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="sec reviews" hidden>
+  <div class="wrap">
+    <h2 class="h2">{{ t.reviews.title }}</h2>
+    <ul class="reviews__list" data-src="{{ root }}data/reviews.json" data-source-label="{{ t.reviews.source }}"></ul>
+  </div>
+</section>
+
+<section id="faq" class="sec faq">
+  <div class="wrap faq__wrap">
+    <h2 class="h2">{{ t.faq.title }}</h2>
+    <div class="faq__list">
+      {% for f in t.faq['items'] %}<details{% if loop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a|tbc }}</p></details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

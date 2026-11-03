@@ -3,7 +3,7 @@
 :root {
   --nile: #0D3436;        /* deep teal, hero and contact */
   --nile-2: #134B4D;      /* lifted teal, Cairo block */
-  --brass: #C9963F;       /* golden hour, booked nights and primary buttons */
+  --brass: #C9963F;       /* golden hour, primary buttons */
   --brass-ink: #2A1E08;   /* text on brass */
   --sea: #BFDCD5;         /* Sokhna water */
   --sand: #E9DCC4;        /* desert sand panels */
@@ -60,19 +60,32 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ---------- header ---------- */
 .top { position: sticky; top: 0; z-index: 20; background: var(--nile); color: var(--paper); border-bottom: 1px solid rgba(233, 220, 196, 0.14); }
-.top__in { display: flex; align-items: center; gap: 24px; min-height: 60px; }
-.mark { display: inline-flex; align-items: baseline; gap: 0; text-decoration: none; font-family: var(--display); font-size: 1.25rem; line-height: 1; white-space: nowrap; }
+.top__in { display: flex; align-items: center; gap: 6px; min-height: 60px; position: relative; }
+@media (min-width: 420px) { .top__in { gap: 16px; } }
+.mark { display: inline-flex; align-items: baseline; gap: 0; text-decoration: none; font-family: var(--display); font-size: 1.1rem; line-height: 1; white-space: nowrap; min-width: 0; padding-block: 12px; }
+@media (min-width: 420px) { .mark { font-size: 1.25rem; } }
 html:lang(ar) .mark { font-family: "Gloock", Georgia, serif; }
 .mark__num { color: var(--brass); }
-.nav { display: none; gap: 22px; margin-inline-start: auto; font-size: var(--step--1); font-weight: 600; }
-.nav a { text-decoration: none; opacity: 0.85; padding-block: 8px; }
-.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
-.langs { display: flex; gap: 2px; margin-inline-start: auto; font-size: var(--step--1); font-weight: 700; }
-.nav + .langs { margin-inline-start: 8px; }
-.langs a { text-decoration: none; padding: 8px 10px; border-radius: var(--r); opacity: 0.7; min-width: 44px; text-align: center; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: var(--step--1); font-weight: 600; }
+.nav a { text-decoration: none; opacity: 0.85; padding-block: 10px; }
+.nav a:hover, .nav a[aria-current="page"] { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+.langs { display: flex; gap: 2px; margin-inline-start: auto; font-size: var(--step--1); font-weight: 700; flex: none; }
+.langs a { text-decoration: none; padding: 12px 4px; border-radius: var(--r); opacity: 0.75; min-width: 36px; min-height: 44px; text-align: center; }
+@media (max-width: 379px) { .mark { font-size: 1rem; } }
+@media (min-width: 420px) { .langs a { padding-inline: 10px; min-width: 44px; } }
 .langs a:hover { opacity: 1; }
 .langs a[aria-current="page"] { opacity: 1; background: rgba(233, 220, 196, 0.14); }
-@media (min-width: 900px) { .nav { display: flex; } }
+.menu-btn { display: none; flex: none; order: 3; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(233, 220, 196, 0.35); border-radius: var(--r); background: transparent; color: inherit; cursor: pointer; }
+/* Small screens: without JS the nav is a wrapped row under the logo; with JS it is a drop-down behind the menu button. */
+@media (max-width: 899px) {
+  .top__in { flex-wrap: wrap; }
+  .nav { order: 4; width: 100%; padding-bottom: 8px; }
+  .js .menu-btn { display: inline-flex; }
+  .js .nav { display: none; position: absolute; top: 100%; inset-inline: 0; padding: 8px var(--gutter) 16px; background: var(--nile); border-bottom: 1px solid rgba(233, 220, 196, 0.14); box-shadow: 0 12px 24px rgba(13, 52, 54, 0.3); }
+  .js .top.is-open .nav { display: grid; }
+  .js .nav a { padding-block: 12px; font-size: var(--step-0); border-bottom: 1px solid rgba(233, 220, 196, 0.1); }
+}
+@media (min-width: 900px) { .nav { margin-inline-start: auto; gap: 22px; flex-wrap: nowrap; } .nav + .langs { margin-inline-start: 8px; } }
 
 /* ---------- buttons ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 12px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: var(--step-0); line-height: 1.2; transition: background-color .15s, color .15s, border-color .15s; }
@@ -82,6 +95,9 @@ html:lang(ar) .mark { font-family: "Gloock", Georgia, serif; }
 .btn--ghost:hover { border-color: var(--sand); background: rgba(233, 220, 196, 0.08); }
 .btn--teal { background: var(--nile); color: var(--paper); }
 .btn--teal:hover { background: var(--nile-2); }
+.btn--wa { gap: 10px; }
+.textlink { font-weight: 700; color: var(--nile-2); text-underline-offset: 4px; padding-block: 12px; }
+.tbc { background: #FFE58A; color: #3A2C00; padding: 0 4px; border-radius: 3px; font-weight: 700; }
 
 /* ---------- hero ---------- */
 .hero { background: var(--nile); color: var(--paper); padding-block: clamp(48px, 8vw, 112px) 28px; }
@@ -97,11 +113,9 @@ html:lang(ar) .hero__sub { line-height: 1.85; }
 .ribbon { margin-top: clamp(48px, 7vw, 88px); }
 .ribbon svg { width: 100%; height: clamp(30px, 3.4vw, 46px); display: block; }
 html[dir="rtl"] .ribbon svg { transform: scaleX(-1); }
-.ribbon .open { fill: rgba(233, 220, 196, 0.2); }
-.ribbon .booked { fill: var(--brass); animation: sweep 1.8s cubic-bezier(.3,.6,.2,1) .25s both; }
-html[dir="rtl"] .ribbon .booked { animation-name: sweep; }
+.ribbon .nights { fill: rgba(233, 220, 196, 0.42); animation: sweep 1.8s cubic-bezier(.3,.6,.2,1) .25s both; }
 @keyframes sweep { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-@media (prefers-reduced-motion: reduce) { .ribbon .booked { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .ribbon .nights { animation: none; } }
 .ribbon figcaption { margin-top: 14px; font-size: var(--step--1); color: var(--sand); }
 
 /* ---------- sections ---------- */
@@ -110,7 +124,23 @@ html[dir="rtl"] .ribbon .booked { animation-name: sweep; }
 html:lang(ar) .h2 { font-weight: 700; line-height: 1.4; }
 .lead { margin-top: 14px; max-width: 56ch; font-size: var(--step-1); color: var(--ink-2); line-height: 1.5; }
 
+/* owner page */
+.hero--page { padding-bottom: clamp(48px, 7vw, 88px); }
+.eyebrow { font-size: var(--step--1); font-weight: 700; color: var(--brass); letter-spacing: 0.04em; margin-bottom: 14px; }
+html:lang(ar) .eyebrow { letter-spacing: 0; }
+.hero--page .hero__title { font-size: var(--step-3); max-width: 18ch; }
+.page-list { margin-top: 40px; }
+.yours--wide { max-width: 760px; }
+.yours h2 { font-family: var(--display); font-weight: 400; font-size: var(--step-2); line-height: 1.15; }
+html:lang(ar) .yours h2 { font-weight: 700; line-height: 1.5; }
+.steps { margin-block: 40px; display: grid; gap: 0; counter-reset: step; border-top: 1px solid var(--line); max-width: 760px; }
+.steps li { counter-increment: step; position: relative; padding-block: 22px; padding-inline-start: 56px; border-bottom: 1px solid var(--line); }
+.steps li::before { content: counter(step); position: absolute; inset-inline-start: 0; top: 20px; width: 38px; height: 38px; border-radius: 50%; background: var(--nile); color: var(--paper); display: grid; place-items: center; font-weight: 800; }
+.steps h3 { font-size: var(--step-1); font-weight: 800; line-height: 1.35; }
+.steps p { margin-top: 6px; color: var(--ink-2); max-width: 60ch; }
+
 /* owners */
+.owners__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
 .owners__grid { margin-block: 48px 40px; display: grid; gap: 40px; }
 @media (min-width: 900px) { .owners__grid { grid-template-columns: 1.55fr 1fr; gap: 64px; align-items: start; } }
 .dolist { display: grid; gap: 0; border-top: 1px solid var(--line); }
@@ -212,7 +242,10 @@ html:lang(ar) .contact__title { font-weight: 700; line-height: 1.35; }
 .contact__alt { color: var(--sand); }
 .contact__alt a { font-weight: 700; text-underline-offset: 4px; }
 
-.foot { background: var(--nile); color: rgba(233, 220, 196, 0.7); border-top: 1px solid rgba(233, 220, 196, 0.14); padding-block: 28px 96px; font-size: var(--step--1); }
+.foot { background: var(--nile); color: rgba(233, 220, 196, 0.75); border-top: 1px solid rgba(233, 220, 196, 0.14); padding-block: 28px 96px; font-size: var(--step--1); }
+.foot__in { display: grid; gap: 12px; }
+.foot__links { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.foot__links a { display: inline-block; padding-block: 10px; text-underline-offset: 4px; overflow-wrap: anywhere; }
 @media (min-width: 900px) { .foot { padding-bottom: 28px; } }
 
 /* floating WhatsApp, mobile only */

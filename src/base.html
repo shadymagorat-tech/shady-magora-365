@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="{{ t.lang }}" dir="{{ t.dir }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ meta.title }}</title>
+<meta name="description" content="{{ meta.description }}">
+<link rel="canonical" href="{{ urls[t.lang] }}">
+{% for code in langs %}<link rel="alternate" hreflang="{{ code }}" href="{{ urls[code] }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ urls['en'] }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shady Magora 365">
+<meta property="og:title" content="{{ meta.og_title }}">
+<meta property="og:description" content="{{ meta.og_description }}">
+<meta property="og:url" content="{{ urls[t.lang] }}">
+<meta property="og:image" content="{{ base }}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ t.ui.og_alt }}">
+<meta property="og:locale" content="{{ og_locale }}">
+{% for code in langs %}{% if code != t.lang %}<meta property="og:locale:alternate" content="{{ {'en': 'en_US', 'fr': 'fr_FR', 'ar': 'ar_EG'}[code] }}">
+{% endif %}{% endfor %}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta.og_title }}">
+<meta name="twitter:description" content="{{ meta.og_description }}">
+<meta name="twitter:image" content="{{ base }}/assets/og.png">
+<meta name="twitter:image:alt" content="{{ t.ui.og_alt }}">
+<meta name="theme-color" content="#0D3436">
+<link rel="icon" href="{{ root }}assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="{{ fonts_url }}">
+<link rel="stylesheet" href="{{ fonts_url }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ fonts_url }}"></noscript>
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+<script>document.documentElement.classList.add('js');{% if t.lang == 'en' %}try{var l=localStorage.getItem('sm365-lang');if(l==='fr'||l==='ar'){location.replace('{{ root }}'+l+'/{{ page_path }}'+location.hash)}}catch(e){}{% endif %}</script>
+<script type="application/ld+json">{{ jsonld }}</script>
+</head>
+<body class="page-{{ page }}">
+<a class="skip" href="#main">{{ t.ui.skip }}</a>
+{% set h = '' if page == 'home' else home %}
+<header class="top">
+  <div class="wrap top__in">
+    <a class="mark" href="{{ home }}" dir="ltr" lang="en"><span class="mark__name">Shady Magora</span>&nbsp;<span class="mark__num">365</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      <span class="visually-hidden">{{ t.ui.menu }}</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="{{ t.ui.nav_label }}">
+      <a href="{{ h }}#owners">{{ t.ui.nav_owners }}</a>
+      <a href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}owners/"{% if page == 'owners' %} aria-current="page"{% endif %}>{{ t.ui.nav_how }}</a>
+      <a href="{{ h }}#stays">{{ t.ui.nav_stays }}</a>
+      <a href="{{ h }}#guests">{{ t.ui.nav_guests }}</a>
+      <a href="{{ h }}#faq">{{ t.ui.nav_faq }}</a>
+      <a href="#contact">{{ t.ui.nav_contact }}</a>
+    </nav>
+    <div class="langs" role="group" aria-label="{{ t.ui.lang_label }}">
+      <a href="{{ links.en }}" hreflang="en" data-lang="en" lang="en" {% if t.lang == 'en' %}aria-current="page"{% endif %}>EN</a>
+      <a href="{{ links.fr }}" hreflang="fr" data-lang="fr" lang="fr" {% if t.lang == 'fr' %}aria-current="page"{% endif %}>FR</a>
+      <a href="{{ links.ar }}" hreflang="ar" data-lang="ar" lang="ar" {% if t.lang == 'ar' %}aria-current="page"{% endif %}>عربي</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 class="contact__title">{{ t.contact.title }}</h2>
+    <p class="contact__lead">{{ t.contact.lead }}</p>
+    <div class="contact__actions">
+      <a class="btn btn--brass btn--wa" href="{{ wa.owner }}" target="_blank" rel="noopener" aria-label="{{ t.contact.wa_label }}">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="currentColor"/></svg>
+        {{ t.contact.wa_btn }}</a>
+      <p class="contact__alt">{{ t.contact.email_label }}: <a href="mailto:shadymagorat@gmail.com">shadymagorat@gmail.com</a></p>
+      <p class="contact__alt">{{ t.contact.phone_label }}: <a href="tel:+201026315970" dir="ltr">+20 102 631 5970</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>{{ t.footer.line }}</p>
+    <ul class="foot__links">
+      <li><a href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}owners/">{{ t.ui.nav_how }}</a></li>
+      <li><a href="{{ wa.owner }}" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="tel:+201026315970" dir="ltr">+20 102 631 5970</a></li>
+      <li><a href="mailto:shadymagorat@gmail.com">shadymagorat@gmail.com</a></li>
+    </ul>
+  </div>
+</footer>
+
+<a class="float-wa" href="{{ wa.owner }}" target="_blank" rel="noopener" aria-label="{{ t.ui.float_label }}">
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="currentColor"/></svg>
+  <span>{{ t.ui.chat }}</span>
+</a>
+
+<script src="{{ root }}assets/site.js" defer></script>
+</body>
+</html>
