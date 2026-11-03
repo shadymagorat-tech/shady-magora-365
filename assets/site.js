@@ -32,3 +32,14 @@ document.querySelectorAll('.langs a[data-lang]').forEach(function (a) {
     })
     .catch(function () {});
 })();
+
+// Small-screen menu.
+(function () {
+  var btn = document.querySelector('.menu-btn');
+  var top = document.querySelector('.top');
+  if (!btn || !top) return;
+  function set(open) { top.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+  document.getElementById('nav').addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && top.classList.contains('is-open')) { set(false); btn.focus(); } });
+})();

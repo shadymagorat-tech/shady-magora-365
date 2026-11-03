@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% set o = t.owner_page %}
+{% block main %}
+<section class="hero hero--page">
+  <div class="wrap hero__in">
+    <p class="eyebrow">{{ o.eyebrow }}</p>
+    <h1 class="hero__title">{{ o.title }}</h1>
+    <p class="hero__sub">{{ o.intro }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--brass" href="{{ wa.owner }}" target="_blank" rel="noopener">{{ o.cta }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec owners" aria-labelledby="do-title">
+  <div class="wrap">
+    <h2 id="do-title" class="h2">{{ o.do_title }}</h2>
+    <p class="lead">{{ o.do_lead }}</p>
+    <ul class="dolist page-list">
+      {% for it in t.owners['items'] %}<li><h3>{{ it.t }}</h3><p>{{ it.d }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sec why" aria-labelledby="dont-title">
+  <div class="wrap">
+    <div class="yours yours--wide">
+      <h2 id="dont-title">{{ o.dont_title }}</h2>
+      <p>{{ o.dont_lead }}</p>
+      <ul>{% for it in o.dont_items %}<li>{{ it }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec start" aria-labelledby="start-title">
+  <div class="wrap">
+    <h2 id="start-title" class="h2">{{ o.start_title }}</h2>
+    <ol class="steps">
+      {% for s in o.steps %}<li><h3>{{ s.t }}</h3><p>{{ s.d|tbc }}</p></li>
+      {% endfor %}
+    </ol>
+    <a class="btn btn--teal" href="{{ wa.owner }}" target="_blank" rel="noopener">{{ o.cta }}</a>
+  </div>
+</section>
+{% endblock %}

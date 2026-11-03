@@ -30,7 +30,7 @@ jobs:
       - name: Copy only what the site serves
         run: |
           mkdir _site
-          cp -r index.html fr ar assets data sitemap.xml robots.txt _site/
+          cp -r index.html owners fr ar assets data sitemap.xml robots.txt _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

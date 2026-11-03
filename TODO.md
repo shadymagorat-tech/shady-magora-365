@@ -20,6 +20,13 @@ Names and Airbnb links in `data/stays.json` come from the pricing repo config.
 - [ ] Khorshid villa: confirm the title "3BR Oasis Villa with Lagoon Pool Access" matches Airbnb.
 - [ ] Open each "See it on Airbnb" link once and check it lands on the right listing.
 
+## Placeholders to confirm
+The site shows yellow `[TO CONFIRM ...]` marks where wording needs your OK. Search the `i18n/*.json` files for `TO CONFIRM`, fix the text, and delete the mark.
+- [ ] Ain Sokhna: "busy every weekend and every Eid" (all languages)
+- [ ] Owner page step 2: is the intro on WhatsApp, a call or a meeting?
+- [ ] Owner page step 3: signed agreement in Arabic and English
+- [ ] Owner page step 4: do owners add you as co-host on their own listing, or another setup?
+
 ## Reviews
 Real reviews only. Add them to `data/reviews.json`, one per guest, each with a link to where it appears:
 ```json
