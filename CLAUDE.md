@@ -1,7 +1,7 @@
-# Shady Magora 365 — Website
+# Complet — Website
 
 ## What this is
-A fast, mobile-first marketing site for **Shady Magora 365**, the Airbnb management business of Shady Magora (Cairo). Two audiences:
+A fast, mobile-first marketing site for **Complet** (Arabic: كومبليه; formerly "Shady Magora 365"), the Airbnb management business of Shady Magora (Cairo). The brand is Complet; Shady appears as the person behind it, never as the brand name. Wordmark: "Complet" with a brass full stop; icon: "C.". Two audiences:
 
 1. **Property owners** in Cairo and Ain Sokhna who want their apartment or villa run on Airbnb.
 2. **Guests** who want a day tour or a private airport pickup.
@@ -14,7 +14,7 @@ The site's only job is to turn visitors into WhatsApp conversations.
 - **No em dashes (—) in any visible copy.** Use commas, periods, or colons.
 - **No fee or commission shown.** Pricing is discussed on WhatsApp.
 - **Only Shady's own photos.** No stock photos of people. If a photo is missing, use a clean placeholder block and list it in `TODO.md`.
-- **Do not name the airport driver.** The service is "private airport pickup in an electric car (Tesla)".
+- **Do not name the airport driver.** The service is "private airport pickup in an electric car". Do not name the car brand (it changes).
 - Shady is a **tour leader**, not a licensed guide. Never write "guide".
 - Surname spelling is **Magora** (never "Magoura") everywhere on the site.
 
@@ -35,11 +35,11 @@ Single page with anchored sections, plus a separate page per language.
    - Reviews, disputes, AirCover claims (draws on 4 years inside Airbnb)
    - Monthly payout settlement with the owner
 3. **Why me** — Former Airbnb employee 2019–2023 (France Specialist and Trainer, Ambassador, AirCover Specialist). Current Airbnb Superhost. Speaks Arabic, English, French. Background in hotels and airlines.
-4. **Areas** — Cairo (Zamalek, Sheikh Zayed and more) and Ain Sokhna (Palm Beach).
-5. **Featured stays** — Cards for the 5 current listings, each linking to its Airbnb page. URLs and photos supplied by Shady; until then, placeholders listed in `TODO.md`.
+4. **Areas** — Cairo (Zamalek, Giza and more) and Ain Sokhna (Palm Beach).
+5. **Featured stays** — Cards for the current listings in `data/stays.json`, each linking to its Airbnb page. URLs and photos supplied by Shady; until then, placeholders listed in `TODO.md`.
 6. **For guests**
    - Day tours with Shady as tour leader
-   - Private airport pickup in a Tesla
+   - Private airport pickup in an electric car
    Each with its own WhatsApp button and a prefilled message.
 7. **Reviews** — Empty component that renders real reviews from `/data/reviews.json` (fields: text, author first name, date, source URL). Hidden if the file is empty.
 8. **FAQ** — Include: "Who handles cleaning and check-in?" → the owner's own team; Shady handles the listing, pricing, guests and payouts. Plus 4–5 more owner questions.

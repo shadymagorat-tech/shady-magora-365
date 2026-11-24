@@ -9,7 +9,7 @@
 {% for code in langs %}<link rel="alternate" hreflang="{{ code }}" href="{{ urls[code] }}">
 {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ urls['en'] }}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Shady Magora 365">
+<meta property="og:site_name" content="Complet">
 <meta property="og:title" content="{{ t.meta.og_title }}">
 <meta property="og:description" content="{{ t.meta.og_description }}">
 <meta property="og:url" content="{{ urls[t.lang] }}">
@@ -37,7 +37,7 @@
 
 <header class="top">
   <div class="wrap top__in">
-    <a class="mark" href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}"><span class="mark__name">Shady Magora</span> <span class="mark__num">365</span></a>
+    <a class="mark" href="{{ root }}{{ '' if t.lang == 'en' else t.lang + '/' }}"><span class="mark__name">Complet</span><span class="mark__num">.</span></a>
     <nav class="nav" aria-label="Main">
       <a href="#owners">{{ t.ui.nav_owners }}</a>
       <a href="#stays">{{ t.ui.nav_stays }}</a>

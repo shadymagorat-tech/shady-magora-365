@@ -2,9 +2,9 @@
   "lang": "en",
   "dir": "ltr",
   "meta": {
-    "title": "Shady Magora 365 | Airbnb management in Cairo and Ain Sokhna",
+    "title": "Complet | Airbnb management in Cairo and Ain Sokhna",
     "description": "I take over your Airbnb listing in Cairo or Ain Sokhna: listing, pricing, guests, reviews and payouts. Former Airbnb specialist, now a Superhost.",
-    "og_title": "Shady Magora 365",
+    "og_title": "Complet",
     "og_description": "Your apartment, booked. Your phone, quiet. Airbnb management in Cairo and Ain Sokhna."
   },
   "ui": {
@@ -52,7 +52,7 @@
   "areas": {
     "title": "Where I work",
     "cairo_t": "Cairo",
-    "cairo_d": "Zamalek, Sheikh Zayed and more. City flats for travellers, families and long stays.",
+    "cairo_d": "Zamalek, Giza by the Pyramids and more. City flats for travellers, families and long stays.",
     "sokhna_t": "Ain Sokhna",
     "sokhna_d": "Palm Beach villas with pools, an hour and a half from Cairo. Busy every weekend and every Eid."
   },
@@ -71,7 +71,7 @@
     "tour_t": "Day tours with me",
     "tour_d": "The Pyramids, Old Cairo, Khan el Khalili, or a day you design. I lead the day: the plan, the timing and the transport.",
     "tour_btn": "Plan a day tour",
-    "pickup_t": "Airport pickup in a Tesla",
+    "pickup_t": "Airport pickup in an electric car",
     "pickup_d": "A private pickup from Cairo airport in an electric car. Quiet, cool, and already waiting when you land.",
     "pickup_btn": "Book a pickup"
   },
@@ -84,7 +84,7 @@
     "items": [
       {"q": "Who handles cleaning and check-in?", "a": "Your own team. I handle the listing, prices, guests, reviews and payouts. We agree the handover details before the first booking."},
       {"q": "Do I lose control of my place?", "a": "No. You set the lowest price you accept, and you can block any dates you want for yourself."},
-      {"q": "Which areas do you cover?", "a": "Cairo (Zamalek, Sheikh Zayed and more) and Ain Sokhna. Somewhere else? Ask anyway."},
+      {"q": "Which areas do you cover?", "a": "Cairo (Zamalek, Giza and more) and Ain Sokhna. Somewhere else? Ask anyway."},
       {"q": "How do you charge?", "a": "A percentage of each booking. The rate depends on the property, so let's talk about yours on WhatsApp."},
       {"q": "Is there a written agreement?", "a": "Yes. A signed agreement in Arabic and English before anything goes live."}
     ]
@@ -96,7 +96,7 @@
     "email_label": "Or email"
   },
   "footer": {
-    "line": "Shady Magora 365. Airbnb management in Cairo and Ain Sokhna."
+    "line": "Complet. Airbnb management in Cairo and Ain Sokhna."
   },
   "wa": {
     "owner": "Hi Shady, I have a property I'd like you to manage on Airbnb.",
