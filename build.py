@@ -69,7 +69,7 @@ def jsonld(t):
     data = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Shady Magora 365",
+        "name": "Complet",
         "description": t["meta"]["description"],
         "url": url_for(t["lang"]),
         "image": f"{BASE}/assets/og.png",

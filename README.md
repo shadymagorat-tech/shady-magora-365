@@ -1,6 +1,6 @@
-# Shady Magora 365
+# Complet
 
-Marketing site for Shady Magora's Airbnb management business in Cairo and Ain Sokhna. English, French and Arabic.
+Marketing site for Complet (كومبليه), Shady Magora's Airbnb management business in Cairo and Ain Sokhna. English, French and Arabic.
 
 - Wording: `i18n/*.json`
 - Listings shown on the site: `data/stays.json`

@@ -2,9 +2,9 @@
   "lang": "fr",
   "dir": "ltr",
   "meta": {
-    "title": "Shady Magora 365 | Gestion Airbnb au Caire et à Aïn Sokhna",
+    "title": "Complet | Gestion Airbnb au Caire et à Aïn Sokhna",
     "description": "Je prends en main votre annonce Airbnb au Caire ou à Aïn Sokhna : annonce, prix, voyageurs, avis et versements. Ancien spécialiste Airbnb, aujourd'hui Superhôte.",
-    "og_title": "Shady Magora 365",
+    "og_title": "Complet",
     "og_description": "Votre appartement réservé, votre téléphone tranquille. Gestion Airbnb au Caire et à Aïn Sokhna."
   },
   "ui": {
@@ -52,7 +52,7 @@
   "areas": {
     "title": "Où je travaille",
     "cairo_t": "Le Caire",
-    "cairo_d": "Zamalek, Cheikh Zayed et d'autres quartiers. Des appartements pour voyageurs, familles et longs séjours.",
+    "cairo_d": "Zamalek, Gizeh près des Pyramides et d'autres quartiers. Des appartements pour voyageurs, familles et longs séjours.",
     "sokhna_t": "Aïn Sokhna",
     "sokhna_d": "Des villas avec piscine à Palm Beach, à une heure et demie du Caire. Pleines chaque week-end et à chaque Aïd."
   },
@@ -71,7 +71,7 @@
     "tour_t": "Une journée d'excursion avec moi",
     "tour_d": "Les Pyramides, le Vieux Caire, Khan el-Khalili, ou une journée à votre idée. J'accompagne la journée : le programme, les horaires et le transport.",
     "tour_btn": "Organiser une excursion",
-    "pickup_t": "Transfert aéroport en Tesla",
+    "pickup_t": "Transfert aéroport en voiture électrique",
     "pickup_d": "Un transfert privé depuis l'aéroport du Caire en voiture électrique. Silencieux, climatisé, et déjà là quand vous atterrissez.",
     "pickup_btn": "Réserver un transfert"
   },
@@ -84,7 +84,7 @@
     "items": [
       {"q": "Qui s'occupe du ménage et de l'accueil ?", "a": "Votre propre équipe. Je m'occupe de l'annonce, des prix, des voyageurs, des avis et des versements. Nous fixons ensemble l'organisation de l'accueil avant la première réservation."},
       {"q": "Est-ce que je perds le contrôle de mon bien ?", "a": "Non. Vous fixez le prix minimum que vous acceptez, et vous bloquez les dates que vous voulez garder pour vous."},
-      {"q": "Quels quartiers couvrez-vous ?", "a": "Le Caire (Zamalek, Cheikh Zayed et d'autres) et Aïn Sokhna. Ailleurs ? Demandez quand même."},
+      {"q": "Quels quartiers couvrez-vous ?", "a": "Le Caire (Zamalek, Gizeh et d'autres) et Aïn Sokhna. Ailleurs ? Demandez quand même."},
       {"q": "Comment êtes-vous rémunéré ?", "a": "Un pourcentage de chaque réservation. Le taux dépend du bien, parlons du vôtre sur WhatsApp."},
       {"q": "Y a-t-il un contrat écrit ?", "a": "Oui. Un contrat signé en arabe et en anglais avant toute mise en ligne."}
     ]
@@ -96,7 +96,7 @@
     "email_label": "Ou par e-mail"
   },
   "footer": {
-    "line": "Shady Magora 365. Gestion Airbnb au Caire et à Aïn Sokhna."
+    "line": "Complet. Gestion Airbnb au Caire et à Aïn Sokhna."
   },
   "wa": {
     "owner": "Bonjour Shady, j'ai un bien que j'aimerais vous confier sur Airbnb.",
